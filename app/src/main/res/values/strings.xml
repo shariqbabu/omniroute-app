@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">OmniRoute</string>
+    <string name="tagline">Never stop coding - Unified AI Gateway</string>
+    <string name="tab_dashboard">Dashboard</string>
+    <string name="tab_playground">Playground</string>
+    <string name="tab_providers">Providers</string>
+    <string name="tab_routing">Routing</string>
+    <string name="tab_logs">Logs</string>
+    <string name="tab_settings">Settings</string>
+</resources>
