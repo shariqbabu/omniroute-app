@@ -157,7 +157,7 @@ fun CompressorEngineCard(
                 Switch(checked = rtk, onCheckedChange = { onToggleRtk() })
             }
 
-            Divider(color = OmniCardBorder, modifier = Modifier.padding(vertical = 10.dp))
+            HorizontalDivider(color = OmniCardBorder, modifier = Modifier.padding(vertical = 10.dp))
 
             // Caveman Mode Switch
             Row(
@@ -172,7 +172,7 @@ fun CompressorEngineCard(
                 Switch(checked = caveman, onCheckedChange = { onToggleCaveman() })
             }
 
-            Divider(color = OmniCardBorder, modifier = Modifier.padding(vertical = 10.dp))
+            HorizontalDivider(color = OmniCardBorder, modifier = Modifier.padding(vertical = 10.dp))
 
             // Auto Fallback Switch
             Row(
