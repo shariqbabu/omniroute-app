@@ -28,23 +28,19 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build Debug APK
-        run: ./gradlew assembleDebug --stacktrace
+      - name: Build Universal APKs
+        run: ./gradlew assembleDebug assembleRelease --stacktrace
 
-      - name: Build Release APK
-        run: ./gradlew assembleRelease --stacktrace || true
-
-      - name: Upload Debug APK Artifact
+      - name: Upload Debug APK
         uses: actions/upload-artifact@v4
         with:
-          name: OmniRoute-v3.8.51-Debug-APK
+          name: OmniRoute-v3.8.51-Universal-Debug-APK
           path: app/build/outputs/apk/debug/*.apk
           retention-days: 14
 
-      - name: Upload Release APK Artifact (if generated)
+      - name: Upload Signed Release APK
         uses: actions/upload-artifact@v4
-        if: always()
         with:
-          name: OmniRoute-v3.8.51-Release-APK
+          name: OmniRoute-v3.8.51-Universal-Release-APK
           path: app/build/outputs/apk/release/*.apk
           retention-days: 14
